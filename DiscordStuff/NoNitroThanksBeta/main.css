@@ -1,1 +1,364 @@
-/* Soon */
+/* Credits: Nyria#3863, Martinz64, BetterDiscord community and the Replugged Community.*/
+
+/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
+
+/* Remove super reactions (https://github.com/Martinz64/remove-nitro) */
+[class*=reaction-][style*="opacity: 1; background:"],
+#message-add-reaction-1,
+[class*=burstEmojiSection-],
+[class*=burstEmojiSection-] + div,
+[class*=reactionSelected-][style*="background:"]{
+    display: none;
+}
+
+/* Remove profile themes (https://github.com/Martinz64/remove-nitro) */
+[class*="profileColors-"]{
+    --profile-gradient-primary-color: var(--background-secondary-alt) !important;
+    --profile-gradient-secondary-color: var(--background-secondary-alt) !important;
+    --profile-gradient-overlay-color: transparent  !important;
+    --profile-gradient-button-color: var(--button-secondary-background) !important;
+    --profile-avatar-border-color: var(--background-secondary-alt) !important;
+    --profile-message-input-border-color: var(--background-modifier-accent) !important;
+    --profile-body-background-color: var(--background-floating) !important;
+    --profile-body-background-hover: var(--background-modifier-hover) !important;
+    --profile-body-divider-color: var(--background-modifier-accent) !important;
+    --profile-role-pill-background-color: var(--background-secondary-alt) !important;
+    --profile-role-pill-border-color: var(--interactive-normal) !important;
+    --account-profile-popout-menu-hover: var(--brand-experiment-560) !important;
+}
+
+/* Remove Bloat (https://github.com/Martinz64/remove-nitro) */
+
+[class^="channel-"] > div > [href="/store"], /* Nitro Button above DM List */
+[class^="upsellVisible-"], /* Banner Nitro Upsell Header in the user modal */
+[class^="premiumIconWrapper"], /* Nitro Icon in top right on Banners */
+[class^="characterCount-"] [class*="upsell-"], /* "Send longer Messages with Discord Nitro!" */
+[class^="emojiSection-"] [class*="shinyButton-"], /* "Get Nitro" button in Emoji/Sticker modal" */
+[class*="tryItOutSection-"], /*try nitro banner section on profile editor*/
+[class^="customizationSection-"] + [class^="upsellContainer-"], /* Per server profile customizations*/
+[class^="customizationSection-"][class*="disabled-"], /* Per server profile customizations*/
+[class*="bannerNitroUpsell-"], /* "Unlock Banner" in profile editor*/
+[class^="imageUploaderHint-"], /* Remove gif option from profile pic upload option*/
+[class^="imagePickerContainer-"] > [class^="optionBox-"]:nth-child(2) /* Remove gif option from profile pic upload option*/
+{
+    display: none !important;
+}
+
+/*Extra stuff (https://github.com/Martinz64/remove-nitro) */
+
+/*Settings*/
+[class^="premiumTab-"], /*remove nitro tab*/
+[class^="premiumTab-"] + [class^="item-"], /*Server boost tab*/
+[class^="premiumTab-"] + [class^="item-"] + [class^="item-"] /*server boost tab*/
+{
+	display: none !important;
+}
+
+/* Avatar decoration nitro promo in profiles (https://github.com/Martinz64/remove-nitro) */
+[class^=limitedFeatureBorder] {
+	display: none;
+}
+
+/* Server Related Stuff */
+
+/* flower icon next to server name */
+[class^="flowerStar-"],
+[class^="flowerStarContainer-"] 
+{
+	display: none !important;
+}
+
+/* question mark when trying to change tag in user settings */
+[class^="questionMark-"],
+
+/* remove stuff in server settings related to nitro */
+.emptyState-Ud44C9 .colorHeaderSecondary-g5teka, 
+.emptyState-Ud44C9 .stickersRow-3OJE_7,
+.container-1eD8xH,
+.emptyState-Ud44C9 .colorHeaderSecondary-g5teka, 
+.emptyState-Ud44C9 .stickersRow-3OJE_7,
+[class^="ShinyButton-"],
+[class^="premiumPromoDescription-"],
+.divider--oiTeJ+div+div+div,
+.children-1xdcWE .upsellContainer-22N_CL,
+.emptyTierWrapper-V5c-R7 .button-f2h6uQ,
+
+/* removes server banners */
+[class^="animatedBannerHoverLayer-"],
+[class^="animatedContainer-"],
+[class^="bannerImage-"],
+.content-yjf30S [style="height: 84px;"]
+
+{
+    display: none;
+}
+
+/* Removes nitro promotion when you press on disabled emojis */
+.premiumPromo-1eKAIB .premiumPromoTitle-3tWrPT{
+    font-size: 0;
+}
+.premiumPromo-1eKAIB .premiumPromoTitle-3tWrPT:before{
+    content:"Hello, This isn't available for free. sorry :(";
+    font-size: 20px;
+    text-align: center;
+    display:block;
+}
+
+
+/* Removes nitro promotion on custom stickers */
+.emptyState-Ud44C9 .header-24Iqpn {
+    font-size: 0px;
+}
+.emptyState-Ud44C9 .header-24Iqpn:before {
+    content:"Hello, This isn't available for free. sorry :(";
+    font-size: 24px;
+    text-align: center;
+    display:block;
+}
+
+[class^="upsellDescription-"] {
+    font-size: 0px;
+    display:none;
+}
+
+/* Hide nitro icon on banners */
+[class^="bannerPremium-"],
+[class^="premiumIconWrapper-"] {
+  display: none;
+}
+
+.privateChannels-oVe7HL [href="/store"] + svg,
+.item-3XjbnG [class*="Promo"],
+.premiumLabel-3HPvdB svg,
+.premiumLabel-3HPvdB .badgeIconSettingsMenu-39c26C {
+    display: none;
+}
+
+.premiumLabel-3HPvdB {
+    color: var(--color-muted);
+}
+
+/* removes server boost from server menu */
+
+.colorDefault-CDqZdO.colorPremium-vwmYZQ.labelContainer-2vJzYL.item-1OdjEX,
+.boostingMenuItemHighlight-udjSBx {display: none}
+
+/* Remove super reactions (https://github.com/Martinz64/remove-nitro) */
+[class*=reaction-][style*="opacity: 1; background:"],
+#message-add-reaction-1,
+[class*=burstEmojiSection-],
+[class*=burstEmojiSection-] + div,
+[class*=reactionSelected-][style*="background:"]{
+    display: none;
+}
+
+/* Remove profile themes (https://github.com/Martinz64/remove-nitro) */
+[class*="profileColors-"]{
+    --profile-gradient-primary-color: var(--background-secondary-alt) !important;
+    --profile-gradient-secondary-color: var(--background-secondary-alt) !important;
+    --profile-gradient-overlay-color: transparent  !important;
+    --profile-gradient-button-color: var(--button-secondary-background) !important;
+    --profile-avatar-border-color: var(--background-secondary-alt) !important;
+    --profile-message-input-border-color: var(--background-modifier-accent) !important;
+    --profile-body-background-color: var(--background-floating) !important;
+    --profile-body-background-hover: var(--background-modifier-hover) !important;
+    --profile-body-divider-color: var(--background-modifier-accent) !important;
+    --profile-role-pill-background-color: var(--background-secondary-alt) !important;
+    --profile-role-pill-border-color: var(--interactive-normal) !important;
+    --account-profile-popout-menu-hover: var(--brand-experiment-560) !important;
+}
+
+/* Remove Bloat (https://github.com/Martinz64/remove-nitro) */
+
+[class^="channel-"] > div > [href="/store"], /* Nitro Button above DM List */
+[class^="upsellVisible-"], /* Banner Nitro Upsell Header in the user modal */
+[class^="premiumIconWrapper"], /* Nitro Icon in top right on Banners */
+[class^="characterCount-"] [class*="upsell-"], /* "Send longer Messages with Discord Nitro!" */
+[class^="emojiSection-"] [class*="shinyButton-"], /* "Get Nitro" button in Emoji/Sticker modal" */
+[class*="tryItOutSection-"], /*try nitro banner section on profile editor*/
+[class^="customizationSection-"] + [class^="upsellContainer-"], /* Per server profile customizations*/
+[class^="customizationSection-"][class*="disabled-"], /* Per server profile customizations*/
+[class*="bannerNitroUpsell-"], /* "Unlock Banner" in profile editor*/
+[class^="imageUploaderHint-"], /* Remove gif option from profile pic upload option*/
+[class^="imagePickerContainer-"] > [class^="optionBox-"]:nth-child(2) /* Remove gif option from profile pic upload option*/
+{
+    display: none !important;
+}
+
+/*Extra stuff (https://github.com/Martinz64/remove-nitro) */
+
+/*Settings*/
+[class^="premiumTab-"], /*remove nitro tab*/
+[class^="premiumTab-"] + [class^="item-"], /*Server boost tab*/
+[class^="premiumTab-"] + [class^="item-"] + [class^="item-"] /*server boost tab*/
+{
+	display: none !important;
+}
+
+/* Avatar decoration nitro promo in profiles (https://github.com/Martinz64/remove-nitro) */
+[class^="limitedFeatureBorder"] {
+	display: none;
+}
+
+/* remove misc nitro advertisements from the UI */
+
+#account-style-your-profile,
+[class^="premiumIcon-"],
+[class^="premiumIconWrapper-"],
+[class^="upsellOverlay-"],
+[class^="upsellOverlayContainer-"],
+[class^="bannerNitroUpsell-"],
+.container-2giAcK,
+.paymentModalContent,
+.gifIconContainer-3os21a,
+.gif-38WdXH,
+.bannerNitroUpsell-2iP18z
+{
+	display: none !important
+}
+
+/* Remove Send Gift button in the message box */
+
+.button-ejjZWC[aria-label="Send a gift"]
+{
+	display: none !important
+}
+
+/* Remove "Nitro" section in home */
+
+.channel-1Shao0 [href="/store"]
+{
+	display: none !important
+}
+
+/* remove nitro settings */
+
+[class^="premiumTab-"],
+.header-2Kx1US:nth-of-type(9),
+.background-Gjdjzm,
+.themed-2.premiumTab-39eQzY,
+.themed-2-lozF.item-3XjbnG.premiumTab-39eQzY,
+.card-16VQ8C.codeRedemptionRedirect-2hYMSQ,
+.emptyStateSubtext-29V2rK
+{
+	display: none !important
+}
+
+/* Profile Customizazion */
+
+[class^="improvedUpsellSection-"],
+[class^="improvedUpsellContainer-"],
+.profileThemeSectionPremiumBorder-pH_ioT.customizationSection-IGy2fS
+{
+	display: none !important
+}
+
+/* Animated Banner advertisement */
+[class^="upsellVisible-2-"],
+[class^="upsellHidden-2-"], 
+[class^="upsell-"],
+[class^="bannerHidden-"], 
+[class^="bannerVisible-"] 
+{
+    display: none !important;
+}
+
+/* Nitro popup in banners */
+
+[class^="premiumIconWrapper-"],
+[class^="premiumIcon-"] 
+{
+    display: none !important;
+}
+
+/* Stream Page ads */
+
+[class^="upsellBanner-"]
+{
+	display: none !important
+}
+
+[Aria-label="Unlock with Discord Nitro"],
+[class^="selectorButtonPremiumRequired-"]
+{
+	display: none !important
+}
+
+/* Removing stuff from settings */
+
+.side-1lrxIh[aria-label="User Settings"] > div:nth-child(n+9):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
+/* .side-1lrxIh[aria-label="User Settings"] > div:nth-child(n+47):nth-child(-n+47), /* Removes Payment Flow from experiments */ /* Breaks non experiments pane uncomment this part if you want it gone */ 
+[id="user-settings-cog-Discord_Nitro"],
+[id="user-settings-cog-Nitro_Server_Boost"],
+[id="user-settings-cog-Subscriptions"],
+[id="user-settings-cog-Payment_Flow_Modals"]
+{
+	display: none !important
+}
+
+/* Removing Nitro ads from activities */
+
+[class^="tierCtaContainer-"],
+[class^="perksHeader-"],
+[class^="upsellIcon-"],
+[class^="perks-"]
+{
+	display: none !important
+}
+
+/* Removing some parts of ads in already removed pages to future proof this theme in case something changes.*/
+
+[class^="guildSubscriptionHeading-"],
+.guildsBlurb-1ouzU-.text-md-normal-304U3g.defaultColor-24IHKz
+{
+	display: none !important
+}
+
+/* Removing Themes (Good luck using them without nitro) */
+
+[class^="premiumFeatureBorder-"],
+.themeEditor-1Ebyfp,
+.premiumFeatureBorder-1i95si.featureBorder-2Jl8g4.featureBorder-39brDJ 
+{
+	display: none !important
+}
+
+/* Removing stuff from the new boost page wohoo */
+
+.content-2jtGoN.lowerBodyContentWrapper-3uemai,
+.content-2jtGoN.middleBodyContentWrapper-2zw83x,
+.colorWhite-Eshn2o.lookOutlined-3RTC7c.button-ejjZWC.guildBoostCtaSecondary-13nyKM.guildBoostCta-1KodYb,
+[class*="guildBoostCta-"],
+[class*="progressBarMarkerLocked-"],
+[class^="tierCard-"],
+[class^="topPerksCard-"],
+[class^="guildBoostCtaSecondary-"],
+[class^="guildBoostCtaSecondary-"]
+{
+    display: none !important;
+}
+
+/* Remove avatar decorations */
+
+[class*="avatarDecoration-"] {
+    display: none !important;
+}
+
+/* Removing some new ads that appeared recently thru A/B testing. */
+[class^="upsellImage-"],
+[class^="perkRow-"],
+[class^="tier0Container-"],
+[class^="premiumFeatureBorder-"],
+[class^="tryItOutSection-"],
+[class^="contentPremium-"],
+.showBorder-2hbqaq.customizationSection-IGy2fS,
+.tryItOutSection-W9qeGH.featureBorder-2Jl8g4.premiumFeatureBorder-1i95si
+{
+	display: none !important
+}
+
+/* ---> fuck you discord <--- */
