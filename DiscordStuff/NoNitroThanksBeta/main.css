@@ -1,17 +1,19 @@
 /* Credits: Nyria#3863, Martinz64, BetterDiscord community and the Replugged Community.*/
 
-/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
-/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
-/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
-/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
-/* Rewrite Of NoNitroThanks. Use the stable version. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. This might be very very very broken*/
+/* Rewrite Of NoNitroThanks. This might be very very very broken*/
 
 /* Remove super reactions (https://github.com/Martinz64/remove-nitro) */
 [class*=reaction-][style*="opacity: 1; background:"],
 #message-add-reaction-1,
+[id*="super-reaction"],
 [class*=burstEmojiSection-],
 [class*=burstEmojiSection-] + div,
-[class*=reactionSelected-][style*="background:"]{
+[class*=reactionSelected-][style*="background:"],
+[aria-label*="Super Reaction"]{
     display: none;
 }
 
@@ -81,7 +83,8 @@
 .container-1eD8xH,
 .emptyState-Ud44C9 .colorHeaderSecondary-g5teka, 
 .emptyState-Ud44C9 .stickersRow-3OJE_7,
-[class^="ShinyButton-"],
+[class*="shinyButton-"],
+[class*="ShinyButton-"],
 [class^="premiumPromoDescription-"],
 .divider--oiTeJ+div+div+div,
 .children-1xdcWE .upsellContainer-22N_CL,
