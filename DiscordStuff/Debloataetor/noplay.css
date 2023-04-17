@@ -1,0 +1,10 @@
+/* Remove "Now Playing" Tab */
+
+[class*="socialLinks-"],
+[class*="nowPlayingColumn-"],
+.wrapper-2-Da9H,
+.wrapper-3Zq_cJ,
+.divider-2UxUgG
+{
+	display: none !important
+}
