@@ -150,15 +150,6 @@
 .colorDefault-CDqZdO.colorPremium-vwmYZQ.labelContainer-2vJzYL.item-1OdjEX,
 .boostingMenuItemHighlight-udjSBx {display: none}
 
-/* Remove super reactions (https://github.com/Martinz64/remove-nitro) */
-[class*=reaction-][style*="opacity: 1; background:"],
-#message-add-reaction-1,
-[class*=burstEmojiSection-],
-[class*=burstEmojiSection-] + div,
-[class*=reactionSelected-][style*="background:"]{
-    display: none;
-}
-
 /* Remove profile themes (https://github.com/Martinz64/remove-nitro) */
 [class*="profileColors-"]{
     --profile-gradient-primary-color: var(--background-secondary-alt) !important;
