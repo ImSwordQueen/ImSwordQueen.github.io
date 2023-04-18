@@ -150,54 +150,6 @@
 .colorDefault-CDqZdO.colorPremium-vwmYZQ.labelContainer-2vJzYL.item-1OdjEX,
 .boostingMenuItemHighlight-udjSBx {display: none}
 
-/* Remove profile themes (https://github.com/Martinz64/remove-nitro) */
-[class*="profileColors-"]{
-    --profile-gradient-primary-color: var(--background-secondary-alt) !important;
-    --profile-gradient-secondary-color: var(--background-secondary-alt) !important;
-    --profile-gradient-overlay-color: transparent  !important;
-    --profile-gradient-button-color: var(--button-secondary-background) !important;
-    --profile-avatar-border-color: var(--background-secondary-alt) !important;
-    --profile-message-input-border-color: var(--background-modifier-accent) !important;
-    --profile-body-background-color: var(--background-floating) !important;
-    --profile-body-background-hover: var(--background-modifier-hover) !important;
-    --profile-body-divider-color: var(--background-modifier-accent) !important;
-    --profile-role-pill-background-color: var(--background-secondary-alt) !important;
-    --profile-role-pill-border-color: var(--interactive-normal) !important;
-    --account-profile-popout-menu-hover: var(--brand-experiment-560) !important;
-}
-
-/* Remove Bloat (https://github.com/Martinz64/remove-nitro) */
-
-[class^="channel-"] > div > [href="/store"], /* Nitro Button above DM List */
-[class^="upsellVisible-"], /* Banner Nitro Upsell Header in the user modal */
-[class^="premiumIconWrapper"], /* Nitro Icon in top right on Banners */
-[class^="characterCount-"] [class*="upsell-"], /* "Send longer Messages with Discord Nitro!" */
-[class^="emojiSection-"] [class*="shinyButton-"], /* "Get Nitro" button in Emoji/Sticker modal" */
-[class*="tryItOutSection-"], /*try nitro banner section on profile editor*/
-[class^="customizationSection-"] + [class^="upsellContainer-"], /* Per server profile customizations*/
-[class^="customizationSection-"][class*="disabled-"], /* Per server profile customizations*/
-[class*="bannerNitroUpsell-"], /* "Unlock Banner" in profile editor*/
-[class^="imageUploaderHint-"], /* Remove gif option from profile pic upload option*/
-[class^="imagePickerContainer-"] > [class^="optionBox-"]:nth-child(2) /* Remove gif option from profile pic upload option*/
-{
-    display: none !important;
-}
-
-/*Extra stuff (https://github.com/Martinz64/remove-nitro) */
-
-/*Settings*/
-[class^="premiumTab-"], /*remove nitro tab*/
-[class^="premiumTab-"] + [class^="item-"], /*Server boost tab*/
-[class^="premiumTab-"] + [class^="item-"] + [class^="item-"] /*server boost tab*/
-{
-	display: none !important;
-}
-
-/* Avatar decoration nitro promo in profiles (https://github.com/Martinz64/remove-nitro) */
-[class^="limitedFeatureBorder"] {
-	display: none;
-}
-
 /* remove misc nitro advertisements from the UI */
 
 #account-style-your-profile,
