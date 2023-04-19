@@ -14,6 +14,13 @@
 [class^="imageUploaderHint-"], /* Remove gif option from profile pic upload option*/
 [class^="imagePickerContainer-"] > [class^="optionBox-"]:nth-child(2), /* Remove gif option from profile pic upload option*/
 
+/*Extra stuff (https://github.com/Martinz64/remove-nitro) */
+
+/*Settings*/
+[class^="premiumTab-"], /*remove nitro tab*/
+[class^="premiumTab-"] + [class^="item-"], /*Server boost tab*/
+[class^="premiumTab-"] + [class^="item-"] + [class^="item-"], /*server boost tab*/
+
 /* question mark when trying to change tag in user settings */
 [class^="questionMark-"],
 
@@ -29,7 +36,6 @@
 .paymentModalContent,
 .gifIconContainer-3os21a,
 .gif-38WdXH,
-.bannerNitroUpsell-2iP18z,
 
 /* Remove Send Gift button in the message box */
 
@@ -93,14 +99,8 @@
 [class^="tierCtaContainer-"],
 [class^="perksHeader-"],
 [class^="upsellIcon-"],
-[class^="perks-"],
+[class^="perks-"]
 
-/*Extra stuff (https://github.com/Martinz64/remove-nitro) */
-
-/*Settings*/
-[class^="premiumTab-"], /*remove nitro tab*/
-[class^="premiumTab-"] + [class^="item-"], /*Server boost tab*/
-[class^="premiumTab-"] + [class^="item-"] + [class^="item-"] /*server boost tab*/
 {
 	display: none !important;
 }
@@ -110,7 +110,7 @@
     font-size: 0;
 }
 .premiumPromo-1eKAIB .premiumPromoTitle-3tWrPT:before{
-    content:"Hello, This isn't available for free. sorry :(";
+    content:"Hello, This isn't available for free. Sorry.";
     font-size: 20px;
     text-align: center;
     display:block;
@@ -122,7 +122,7 @@
     font-size: 0px;
 }
 .emptyState-Ud44C9 .header-24Iqpn:before {
-    content:"Hello, This isn't available for free. sorry :(";
+    content:"Hello, This isn't available for free. Sorry.";
     font-size: 24px;
     text-align: center;
     display:block;

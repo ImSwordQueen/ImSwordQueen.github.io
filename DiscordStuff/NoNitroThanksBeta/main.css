@@ -183,12 +183,9 @@
 
 /* remove nitro settings */
 
-[class^="premiumTab-"],
 .header-2Kx1US:nth-of-type(9),
 .background-Gjdjzm,
-.themed-2.premiumTab-39eQzY,
-.themed-2-lozF.item-3XjbnG.premiumTab-39eQzY,
-.card-16VQ8C.codeRedemptionRedirect-2hYMSQ,
+[class^="codeRedemptionRedirect-"],
 .emptyStateSubtext-29V2rK
 {
 	display: none !important
@@ -236,8 +233,7 @@
 
 /* Removing stuff from settings */
 
-.side-1lrxIh[aria-label="User Settings"] > div:nth-child(n+9):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
-/* .side-1lrxIh[aria-label="User Settings"] > div:nth-child(n+47):nth-child(-n+47), /* Removes Payment Flow from experiments */ /* Breaks non experiments pane uncomment this part if you want it gone */ 
+[class*="side-"][aria-label="User Settings"] > div:nth-child(n+9):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
 [id="user-settings-cog-Discord_Nitro"],
 [id="user-settings-cog-Nitro_Server_Boost"],
 [id="user-settings-cog-Subscriptions"],
