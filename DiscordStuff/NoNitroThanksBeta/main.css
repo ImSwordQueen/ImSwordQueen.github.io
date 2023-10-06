@@ -74,6 +74,10 @@
 	display: none !important;
 }
 
+/* Remove shop */ 
+[class*="premiumFeatureBannerBackground-"],
+[class*="premiumFeature"],
+
 /* question mark when trying to change tag in user settings */
 [class^="questionMark-"],
 
