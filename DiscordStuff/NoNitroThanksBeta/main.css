@@ -74,9 +74,14 @@
 	display: none !important;
 }
 
+
 /* Remove shop */ 
 [class*="premiumFeatureBannerBackground-"],
 [class*="premiumFeature"],
+
+[class^="channel-"] > div > [href="/shop"]{
+    display: none !important
+}
 
 /* question mark when trying to change tag in user settings */
 [class^="questionMark-"],
