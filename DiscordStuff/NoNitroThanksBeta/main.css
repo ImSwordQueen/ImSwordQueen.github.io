@@ -17,6 +17,11 @@
     display: none;
 }
 
+/* Remove profile effects (jevil7452) */
+.profileEffects-km5xa2{
+    display: none !important
+}
+
 /* Remove profile themes (https://github.com/Martinz64/remove-nitro) */
 [class*="profileColors-"]{
     --profile-gradient-primary-color: var(--background-secondary-alt) !important;
