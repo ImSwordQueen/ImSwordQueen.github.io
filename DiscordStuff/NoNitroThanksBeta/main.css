@@ -1,29 +1,25 @@
 /* Credits: Nyria#3863, Martinz64, BetterDiscord community and the Replugged Community.*/
 
-/* Rewrite Of NoNitroThanks. This might be very very very broken*/
-/* Rewrite Of NoNitroThanks. This might be very very very broken*/
-/* Rewrite Of NoNitroThanks. This might be very very very broken*/
-/* Rewrite Of NoNitroThanks. This might be very very very broken*/
-/* Rewrite Of NoNitroThanks. This might be very very very broken*/
+/* Massive rewrite of NoNitroThanks. Most likely stuff is going to be broken or missing. Please report!*/
 
 /* Remove super reactions (https://github.com/Martinz64/remove-nitro) */
-[class*=reaction-][style*="opacity: 1; background:"],
-#message-add-reaction-1,
+[class*=reaction][style*="opacity: 1; background:"],
+#message_add_reaction-1,
 [id*="super-reaction"],
-[class*=burstEmojiSection-],
-[class*=burstEmojiSection-] + div,
-[class*=reactionSelected-][style*="background:"],
+[class*=burstEmojiSection],
+[class*=burstEmojiSection] + div,
+[class*=reactionSelected][style*="background:"],
 [aria-label*="Super Reaction"]{
     display: none;
 }
 
 /* Remove profile effects (jevil7452) */
-.profileEffects-km5xa2{
+[class*=profileEffects_]{
     display: none !important
 }
 
 /* Remove profile themes (https://github.com/Martinz64/remove-nitro) */
-[class*="profileColors-"]{
+[class*="profileColors"]{
     --profile-gradient-primary-color: var(--background-secondary-alt) !important;
     --profile-gradient-secondary-color: var(--background-secondary-alt) !important;
     --profile-gradient-overlay-color: transparent  !important;
@@ -40,17 +36,17 @@
 
 /* Remove Bloat (https://github.com/Martinz64/remove-nitro) */
 
-[class^="channel-"] > div > [href="/store"], /* Nitro Button above DM List */
-[class^="upsellVisible-"], /* Banner Nitro Upsell Header in the user modal */
+[class^="channel"] > div > [href="/store"], /* Nitro Button above DM List */
+[class^="upsellVisible"], /* Banner Nitro Upsell Header in the user modal */
 [class^="premiumIconWrapper"], /* Nitro Icon in top right on Banners */
-[class^="characterCount-"] [class*="upsell-"], /* "Send longer Messages with Discord Nitro!" */
-[class^="emojiSection-"] [class*="shinyButton-"], /* "Get Nitro" button in Emoji/Sticker modal" */
-[class*="tryItOutSection-"], /*try nitro banner section on profile editor*/
-[class^="customizationSection-"] + [class^="upsellContainer-"], /* Per server profile customizations*/
-[class^="customizationSection-"][class*="disabled-"], /* Per server profile customizations*/
-[class*="bannerNitroUpsell-"], /* "Unlock Banner" in profile editor*/
-[class^="imageUploaderHint-"], /* Remove gif option from profile pic upload option*/
-[class^="imagePickerContainer-"] > [class^="optionBox-"]:nth-child(2) /* Remove gif option from profile pic upload option*/
+[class^="characterCount"] [class*="upsell"], /* "Send longer Messages with Discord Nitro!" */
+[class^="emojiSection"] [class*="shinyButton"], /* "Get Nitro" button in Emoji/Sticker modal" */
+[class*="tryItOutSection"], /*try nitro banner section on profile editor*/
+[class^="customizationSection"] + [class^="upsellContainer"], /* Per server profile customizations*/
+[class^="customizationSection"][class*="disabled"], /* Per server profile customizations*/
+[class*="bannerNitroUpsell"], /* "Unlock Banner" in profile editor*/
+[class^="imageUploaderHint"], /* Remove gif option from profile pic upload option*/
+[class^="imagePickerContainer"] > [class^="optionBox"]:nth-child(2) /* Remove gif option from profile pic upload option*/
 {
     display: none !important;
 }
@@ -58,249 +54,236 @@
 /*Extra stuff (https://github.com/Martinz64/remove-nitro) */
 
 /*Settings*/
-[class^="premiumTab-"], /*remove nitro tab*/
-[class^="premiumTab-"] + [class^="item-"], /*Server boost tab*/
-[class^="premiumTab-"] + [class^="item-"] + [class^="item-"] /*server boost tab*/
+[class^="premiumTab"], /*remove nitro tab*/
+[class^="premiumTab"] + [class^="item"], /*Server boost tab*/
+[class^="premiumTab"] + [class^="item"] + [class^="item"] /*server boost tab*/
 {
 	display: none !important;
 }
 
 /* Avatar decoration nitro promo in profiles (https://github.com/Martinz64/remove-nitro) */
-[class^=limitedFeatureBorder] {
-	display: none;
+[class^="limitedFeatureBorder"] {
+	display: none !important;
 }
 
 /* Server Related Stuff */
 
 /* flower icon next to server name */
-[class^="flowerStar-"],
-[class^="flowerStarContainer-"] 
+[class^="flowerStar"],
+[class^="flowerStarContainer"] 
 {
 	display: none !important;
 }
 
 
 /* Remove shop */ 
-[class*="premiumFeatureBannerBackground-"],
+[class*="premiumFeatureBannerBackground"],
 [class*="premiumFeature"],
 
-[class^="channel-"] > div > [href="/shop"]{
+[class^="channel"] > div > [href="/shop"]{
     display: none !important
 }
 
-/* question mark when trying to change tag in user settings */
-[class^="questionMark-"],
-
 /* remove stuff in server settings related to nitro */
-.emptyState-Ud44C9 .colorHeaderSecondary-g5teka, 
-.emptyState-Ud44C9 .stickersRow-3OJE_7,
-.container-1eD8xH,
-.emptyState-Ud44C9 .colorHeaderSecondary-g5teka, 
-.emptyState-Ud44C9 .stickersRow-3OJE_7,
-[class*="shinyButton-"],
-[class*="ShinyButton-"],
+[class^="emptyState"]>[class^="colorHeaderSecondary"],
+[class^="emptyState"]>[class^="stickersRow"],
+[class*="shinyButton"],
 [class^="premiumPromoDescription-"],
-.divider--oiTeJ+div+div+div,
-.children-1xdcWE .upsellContainer-22N_CL,
-.emptyTierWrapper-V5c-R7 .button-f2h6uQ,
+[class^="divider"]+div+div+div,
+[class^="children"]>[class^="upsellContainer"],
+[class^="emptyTierWrapper"]>[class^="button"],
 
-/* removes server banners */
-[class^="animatedBannerHoverLayer-"],
-[class^="animatedContainer-"],
-[class^="bannerImage-"],
-.content-yjf30S [style="height: 84px;"]
+/* server banners */
+[class^="animatedBannerHoverLayer"],
+[class^="animatedContainer"],
+[class^="bannerImage"],
+[class^="content"] [style="height: 84px;"]
 
 {
-    display: none;
+    display: none !important;
 }
 
-/* Removes nitro promotion when you press on disabled emojis */
-.premiumPromo-1eKAIB .premiumPromoTitle-3tWrPT{
-    font-size: 0;
+/* nitro promotion for disabled emojis */
+[class^="premiumPromo"] [class^="premiumPromoTitle"] {
+    font-size: 0 !important;
 }
-.premiumPromo-1eKAIB .premiumPromoTitle-3tWrPT:before{
-    content:"Hello, This isn't available for free. sorry :(";
-    font-size: 20px;
-    text-align: center;
-    display:block;
+[class^="premiumPromo"] [class^="premiumPromoTitle"]:before{
+    content:"Hello, This isn't available for free. sorry :(" !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    display:block !important;
 }
 
 
 /* Removes nitro promotion on custom stickers */
-.emptyState-Ud44C9 .header-24Iqpn {
-    font-size: 0px;
+[class^="emptyState"] [class^="header"] {
+    font-size: 0px !important;
 }
-.emptyState-Ud44C9 .header-24Iqpn:before {
+[class^="emptyState"] [class^="header"]:before {
     content:"Hello, This isn't available for free. sorry :(";
-    font-size: 24px;
-    text-align: center;
-    display:block;
+    font-size: 24px !important;
+    text-align: center !important;
+    display:block !important;
 }
 
-[class^="upsellDescription-"] {
-    font-size: 0px;
-    display:none;
+[class^="upsellDescription"] {
+    font-size: 0px !important;
+    display:none !important;
 }
 
 /* Hide nitro icon on banners */
-[class^="bannerPremium-"],
-[class^="premiumIconWrapper-"] {
-  display: none;
+[class^="bannerPremium"] !important,
+[class^="premiumIconWrapper"],
+[class^="privateChannels"] [href="/store"] + svg,
+[class^="item"] [class*="Promo"],
+[class^="premiumLabel"] svg,
+[class^="premiumLabel"] [class^="badgeIconSettingsMenu"] {
+    display: none !important;
 }
 
-.privateChannels-oVe7HL [href="/store"] + svg,
-.item-3XjbnG [class*="Promo"],
-.premiumLabel-3HPvdB svg,
-.premiumLabel-3HPvdB .badgeIconSettingsMenu-39c26C {
-    display: none;
+[class^="premiumLabel"] {
+    color: var(--color-muted) !important;
 }
 
-.premiumLabel-3HPvdB {
-    color: var(--color-muted);
+/* Server boost from server menu */
+
+[class^="colorDefault"] [class^="colorPremium"] [class^="labelContainer"] [class^="item"],
+[class^="boostingMenuItemHighlight"] {
+	display: none !important;
 }
-
-/* removes server boost from server menu */
-
-.colorDefault-CDqZdO.colorPremium-vwmYZQ.labelContainer-2vJzYL.item-1OdjEX,
-.boostingMenuItemHighlight-udjSBx {display: none}
 
 /* remove misc nitro advertisements from the UI */
 
-#account-style-your-profile,
-[class^="premiumIcon-"],
-[class^="premiumIconWrapper-"],
-[class^="upsellOverlay-"],
-[class^="upsellOverlayContainer-"],
-[class^="bannerNitroUpsell-"],
-.container-2giAcK,
-.paymentModalContent,
-.gifIconContainer-3os21a,
-.gif-38WdXH,
-.bannerNitroUpsell-2iP18z
+#account_style_your_profile,
+[class^="premiumIcon"],
+[class^="premiumIconWrapper"],
+[class^="upsellOverlay"],
+[class^="upsellOverlayContainer"],
+[class^="bannerNitroUpsell"],
+[class^="paymentModalContent"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* Remove Send Gift button in the message box */
 
-.button-ejjZWC[aria-label="Send a gift"]
+[class^="button"] [aria-label="Send a gift"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* Remove "Nitro" section in home */
 
-.channel-1Shao0 [href="/store"]
+[class^="channel"] [href="/store"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* remove nitro settings */
 
-.header-2Kx1US:nth-of-type(9),
-.background-Gjdjzm,
-[class^="codeRedemptionRedirect-"],
-.emptyStateSubtext-29V2rK
+[class^="header"]:nth-of-type(9),
+[class^="background"]
+[class^="codeRedemptionRedirect"],
+[class^="emptyStateSubtext"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* Profile Customizazion */
 
-[class^="improvedUpsellSection-"],
-[class^="improvedUpsellContainer-"],
-.profileThemeSectionPremiumBorder-pH_ioT.customizationSection-IGy2fS
+[class^="improvedUpsellSection"],
+[class^="improvedUpsellContainer"],
+[class^="profileThemeSectionPremiumBorder"]>[class^="customizationSection"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* Animated Banner advertisement */
-[class^="upsellVisible-2-"],
-[class^="upsellHidden-2-"], 
-[class^="upsell-"],
-[class^="bannerHidden-"], 
-[class^="bannerVisible-"] 
+[class^="upsellVisible-2"],
+[class^="upsellHidden-2"], 
+[class^="upsell"],
+[class^="bannerHidden"], 
+[class^="bannerVisible"] 
 {
     display: none !important;
 }
 
 /* Nitro popup in banners */
 
-[class^="premiumIconWrapper-"],
-[class^="premiumIcon-"] 
+[class^="premiumIconWrapper"],
+[class^="premiumIcon"] 
 {
     display: none !important;
 }
 
 /* Stream Page ads */
 
-[class^="upsellBanner-"]
+[class^="upsellBanner"]
 {
-	display: none !important
+	display: none !important;
 }
 
 [Aria-label="Unlock with Discord Nitro"],
-[class^="selectorButtonPremiumRequired-"]
+[class^="selectorButtonPremiumRequired"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* Removing stuff from settings */
 
-[class*="side-"][aria-label="User Settings"] > div:nth-child(n+9):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
-[id="user-settings-cog-Discord_Nitro"],
+[class*="side"][aria-label="User Settings"] > div:nth-child(n+9):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
+[id="user-settings-cog-Discord-Nitro"],
 [id="user-settings-cog-Nitro_Server_Boost"],
 [id="user-settings-cog-Subscriptions"],
-[id="user-settings-cog-Payment_Flow_Modals"]
+[id="user-settings-cog-Payment-Flow-Modals"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* Removing Nitro ads from activities */
 
-[class^="tierCtaContainer-"],
-[class^="perksHeader-"],
-[class^="upsellIcon-"],
-[class^="perks-"]
+[class^="tierCtaContainer"],
+[class^="perksHeader"],
+[class^="upsellIcon"],
+[class^="perks"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* Removing some parts of ads in already removed pages to future proof this theme in case something changes.*/
 
-[class^="guildSubscriptionHeading-"],
-.guildsBlurb-1ouzU-.text-md-normal-304U3g.defaultColor-24IHKz
+[class^="guildSubscriptionHeading"],
+[class^="guildsBlurb"]>[class^="text"]>[class^="defaultColor"]
 {
-	display: none !important
+	display: none !important;
 }
 
-/* Removing Themes (Good luck using them without nitro) */
+/* Removing fake themes section (It won't remove the themes section if you use fakenitro) */
 
-[class^="premiumFeatureBorder-"],
-.themeEditor-1Ebyfp,
-.premiumFeatureBorder-1i95si.featureBorder-2Jl8g4.featureBorder-39brDJ 
+[class^="premiumFeatureBorder"],
+[class^="premiumFeatureBorder"]>[class^="featureBorder"]>[class^="featureBorder"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* Removing stuff from the new boost page wohoo */
 
-.content-2jtGoN.lowerBodyContentWrapper-3uemai,
-.content-2jtGoN.middleBodyContentWrapper-2zw83x,
-.colorWhite-Eshn2o.lookOutlined-3RTC7c.button-ejjZWC.guildBoostCtaSecondary-13nyKM.guildBoostCta-1KodYb,
-[class*="guildBoostCta-"],
-[class*="progressBarMarkerLocked-"],
-[class^="tierCard-"],
-[class^="topPerksCard-"],
-[class^="guildBoostCtaSecondary-"],
-[class^="guildBoostCtaSecondary-"]
+[class*="content"]>[class*="lowerBodyContentWrapper"],
+[class*="content"]>[class*="middleBodyContentWrapper"],
+[class*="colorWhite"]>[class*="lookOutlined"]>[class*="button"]>[class*="guildBoostCtaSecondary"]>[class*="guildBoostCta"],
+[class*="guildBoostCta"],
+[class*="progressBarMarkerLocked"],
+[class^="tierCard"],
+[class^="topPerksCard"],
+[class^="guildBoostCtaSecondary"],
+[class^="guildBoostCtaSecondary"]
 {
     display: none !important;
 }
 
 /* Remove avatar decorations */
 
-[class*="avatarDecoration-"] {
+[class*="avatarDecoration"] {
     display: none !important;
 }
 
@@ -315,17 +298,17 @@
 }
 
 svg[class*="avatarDecorationHint"] {
-    left: 0px;
-    top: 0px;
-    height: 80px;
-    width: 80px;
+    left: 0px !important;
+    top: 0px !important;
+    height: 80px !important;
+    width: 80px !important;
 }
 
 [class^="userPopoutInner"] [class^="wrapper"] [class^="banner"],
 [class^="avatarDecoration"],
 [mask^="url(#svg-mask-avatar-decoration-status"],
 [class*="bannerSVGWrapper"] mask image {
-    display: none;
+    display: none !important;
 }
 
 [mask^="url(#svg-mask-avatar-decoration-profile"] [class*="avatarHintInner"] {
@@ -333,16 +316,16 @@ svg[class*="avatarDecorationHint"] {
 }
 
 /* Removing some new ads that appeared recently thru A/B testing. */
-[class^="upsellImage-"],
-[class^="perkRow-"],
-[class^="tier0Container-"],
-[class^="premiumFeatureBorder-"],
-[class^="tryItOutSection-"],
-[class^="contentPremium-"],
-.showBorder-2hbqaq.customizationSection-IGy2fS,
-.tryItOutSection-W9qeGH.featureBorder-2Jl8g4.premiumFeatureBorder-1i95si
+[class^="upsellImage"],
+[class^="perkRow"],
+[class^="tier0Container"],
+[class^="premiumFeatureBorder"],
+[class^="tryItOutSection"],
+[class^="contentPremium"],
+[class^="showBorder"]>[class^="customizationSection"],
+[class^="tryItOutSection-W9qeGH"]>[class^="featureBorder"]>[class^="premiumFeatureBorder"]
 {
-	display: none !important
+	display: none !important;
 }
 
 /* ---> fuck you discord <--- */
