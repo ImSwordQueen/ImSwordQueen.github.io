@@ -231,7 +231,7 @@
 
 /* Removing stuff from settings */
 
-[class*="side"][aria-label="User Settings"] > div:nth-child(n+9):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
+[class*="side"][aria-label="User Settings"] > div:nth-child(n+10):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
 [id="user-settings-cog-Discord-Nitro"],
 [id="user-settings-cog-Nitro_Server_Boost"],
 [id="user-settings-cog-Subscriptions"],
