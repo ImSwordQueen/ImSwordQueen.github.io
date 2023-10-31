@@ -36,7 +36,7 @@
 
 /* Remove Bloat (https://github.com/Martinz64/remove-nitro) */
 
-[class^="channel"] > div > [href="/store"], /* Nitro Button above DM List */
+[class^="channel"]  >  div  >  [href="/store"], /* Nitro Button above DM List */
 [class^="upsellVisible"], /* Banner Nitro Upsell Header in the user modal */
 [class^="premiumIconWrapper"], /* Nitro Icon in top right on Banners */
 [class^="characterCount"] [class*="upsell"], /* "Send longer Messages with Discord Nitro!" */
@@ -46,7 +46,7 @@
 [class^="customizationSection"][class*="disabled"], /* Per server profile customizations*/
 [class*="bannerNitroUpsell"], /* "Unlock Banner" in profile editor*/
 [class^="imageUploaderHint"], /* Remove gif option from profile pic upload option*/
-[class^="imagePickerContainer"] > [class^="optionBox"]:nth-child(2) /* Remove gif option from profile pic upload option*/
+[class^="imagePickerContainer"]  >  [class^="optionBox"]:nth-child(2) /* Remove gif option from profile pic upload option*/
 {
     display: none !important;
 }
@@ -80,18 +80,17 @@
 [class*="premiumFeatureBannerBackground"],
 [class*="premiumFeature"],
 
-[class^="channel"] > div > [href="/shop"]{
+[class^="channel"]  >  div  >  [href="/shop"]{
     display: none !important
 }
 
 /* remove stuff in server settings related to nitro */
-[class^="emptyState"]>[class^="colorHeaderSecondary"],
-[class^="emptyState"]>[class^="stickersRow"],
+[class^="emptyState"] > [class^="colorHeaderSecondary"],
+[class^="emptyState"] > [class^="stickersRow"],
 [class*="shinyButton"],
 [class^="premiumPromoDescription-"],
-[class^="divider"]+div+div+div,
-[class^="children"]>[class^="upsellContainer"],
-[class^="emptyTierWrapper"]>[class^="button"],
+[class^="children"] > [class^="upsellContainer"],
+[class^="emptyTierWrapper"]  >  [class^="button"],
 
 /* server banners */
 [class^="animatedBannerHoverLayer"],
@@ -193,7 +192,7 @@
 
 [class^="improvedUpsellSection"],
 [class^="improvedUpsellContainer"],
-[class^="profileThemeSectionPremiumBorder"]>[class^="customizationSection"]
+[class^="profileThemeSectionPremiumBorder"] > [class^="customizationSection"]
 {
 	display: none !important;
 }
@@ -231,7 +230,7 @@
 
 /* Removing stuff from settings */
 
-[class*="side"][aria-label="User Settings"] > div:nth-child(n+10):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
+[class*="side"][aria-label="User Settings"]  >  div:nth-child(n+10):nth-child(-n+13), /* Removes Nitro, Subscriptions, Nitro Boost pages */
 [id="user-settings-cog-Discord-Nitro"],
 [id="user-settings-cog-Nitro_Server_Boost"],
 [id="user-settings-cog-Subscriptions"],
@@ -253,7 +252,7 @@
 /* Removing some parts of ads in already removed pages to future proof this theme in case something changes.*/
 
 [class^="guildSubscriptionHeading"],
-[class^="guildsBlurb"]>[class^="text"]>[class^="defaultColor"]
+[class^="guildsBlurb"] > [class^="text"] > [class^="defaultColor"]
 {
 	display: none !important;
 }
@@ -261,16 +260,16 @@
 /* Removing fake themes section (It won't remove the themes section if you use fakenitro) */
 
 [class^="premiumFeatureBorder"],
-[class^="premiumFeatureBorder"]>[class^="featureBorder"]>[class^="featureBorder"]
+[class^="premiumFeatureBorder"] > [class^="featureBorder"] > [class^="featureBorder"]
 {
 	display: none !important;
 }
 
 /* Removing stuff from the new boost page wohoo */
 
-[class*="content"]>[class*="lowerBodyContentWrapper"],
-[class*="content"]>[class*="middleBodyContentWrapper"],
-[class*="colorWhite"]>[class*="lookOutlined"]>[class*="button"]>[class*="guildBoostCtaSecondary"]>[class*="guildBoostCta"],
+[class*="content"] > [class*="lowerBodyContentWrapper"],
+[class*="content"] > [class*="middleBodyContentWrapper"],
+[class*="colorWhite"] > [class*="lookOutlined"] > [class*="button"] > [class*="guildBoostCtaSecondary"] > [class*="guildBoostCta"],
 [class*="guildBoostCta"],
 [class*="progressBarMarkerLocked"],
 [class^="tierCard"],
@@ -322,10 +321,10 @@ svg[class*="avatarDecorationHint"] {
 [class^="premiumFeatureBorder"],
 [class^="tryItOutSection"],
 [class^="contentPremium"],
-[class^="showBorder"]>[class^="customizationSection"],
-[class^="tryItOutSection-W9qeGH"]>[class^="featureBorder"]>[class^="premiumFeatureBorder"]
+[class^="showBorder"] > [class^="customizationSection"],
+[class^="tryItOutSection-W9qeGH"] > [class^="featureBorder"] > [class^="premiumFeatureBorder"]
 {
 	display: none !important;
 }
 
-/* ---> fuck you discord <--- */
+/* --- >  fuck you discord <--- */
